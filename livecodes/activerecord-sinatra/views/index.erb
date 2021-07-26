@@ -1,0 +1,22 @@
+<h1>Schwifty Advisor</h1>
+
+<h2>Get schwifty with one of our restaurants:</h2>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></li>
+  <% end %>
+</ul>
+
+<h4>Add a schwifty restaurant:</h4>
+<form action="/restaurants" method="post">
+  <label for="name">
+    Name:
+    <input type="text" name="name">
+  </label>
+  <label for="address">
+    Address:
+    <input type="text" name="address">
+  </label>
+  <input type="submit">
+</form>
