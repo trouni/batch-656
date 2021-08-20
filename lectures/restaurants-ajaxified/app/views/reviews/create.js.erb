@@ -1,0 +1,2 @@
+document.getElementById('reviews').insertAdjacentHTML('afterbegin', '<%=j render @review %>')
+document.getElementById('reviews-count').innerText = '<%= pluralize @restaurant.reviews.count, "review" %>'
